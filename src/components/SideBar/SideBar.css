@@ -1,0 +1,71 @@
+.sideLeft {
+  background: #051b33;
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+}
+.fa-toggle-on {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 35px;
+}
+.inpWrapper {
+  grid-gap: 5px;
+}
+
+.searchCity {
+  height: 30px;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  padding-left: 15px;
+}
+
+.fa-search {
+  height: 30px;
+  padding: 5px;
+  background: #fff;
+  border-radius: 5px;
+  width: 80px;
+  color: #000;
+  font-size: 18px;
+  border: none;
+}
+.fa-sun,
+.fa-clouds,
+.fa-temperature-high,
+.fa-clouds,
+.fa-moon-cloud,
+.fa-sun-cloud,
+.fa-moon{
+  font-size: 120px;
+  font-weight: 100;
+}
+.grade {
+  font-size: 100px;
+}
+.grade span {
+  font-size: 25px;
+}
+.grade-unit {
+  font-size: 80px;
+}
+h2 {
+  font-size: 3rem !important;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.weather-title p {
+  font-family: "Montserrat", sans-serif;
+}
+.error-message{
+    color: red;
+    font-family: "Montserrat", sans-serif;
+}
+
+  
+  
+  .toggle-button.active {
+   
+    color: blue; /* Change the color when active */
+    transform: scale(1.2); /* Scale the button when active (for example) */
+  }

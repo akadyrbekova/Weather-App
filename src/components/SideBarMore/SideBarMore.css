@@ -1,0 +1,35 @@
+.sideBarMore {
+  background: #100e1c;
+  color: #fff;
+}
+.celsius,
+.fahrenheit {
+  padding: 0px 12px;
+  border-radius: 50px;
+  display: flex;
+  margin: 0px 5px;
+  font-size: 25px;
+}
+
+.celsius {
+  background: #e7e7eb;
+  color: #1d213a;
+}
+
+.fahrenheit {
+  background: #585676;
+}
+.descr-txt {
+  white-space: nowrap;
+  font-size: 2rem !important;
+  text-align: start;
+}
+.card-grade {
+  font-size: 40px;
+}
+.card-ed {
+  font-size: 30px;
+}
+.fa-temperature-down{
+    color: red;
+}
