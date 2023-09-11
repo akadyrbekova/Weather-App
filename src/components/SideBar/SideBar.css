@@ -65,11 +65,20 @@ h2 {
     color: red;
     font-family: "Montserrat", sans-serif;
 }
+.lightBackground {
+  background: #fafafa; 
+}
 
-  
-  
-  .toggle-button.active {
-   
-    color: blue; /* Change the color when active */
-    transform: scale(1.2); /* Scale the button when active (for example) */
-  }
+.darkBackground {
+  background: #051b33;
+  color: #fff;
+}
+.lightText {
+  color: #000; 
+}
+
+.lightInput,
+.fa-search {
+  background-color: #0000001c; 
+ color: #3d3d3d;
+}

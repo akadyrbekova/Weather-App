@@ -62,9 +62,11 @@ const SideBar = () => {
   };
   //Фиксируем город, очищение после error
   const handleInputChange = (e) => {
-    setCity(e.target.value);
+    const trimmedValue = e.target.value.trim();
+    setCity(trimmedValue);
     setError("");
   };
+ 
 
   const getWeatherIcon = (iconCode) => {
     switch (iconCode) {
@@ -89,49 +91,49 @@ const SideBar = () => {
     setIsOn(!isOn);
   };
 
-  return (
+   return (
     <>
-      <div className="col-md-4  container sideLeft">
+      <div className={`col-md-4 container sideLeft ${isOn ? 'lightBackground' : 'darkBackground'}`}>
         <div>
           <button onClick={toggleSwitch} style={{background:'transparent',margin:'5px 0'}}>
-            {isOn ? <i class="far fa-power-off" style={{color:'red'}}></i> : <i class="far fa-power-off" style={{color:'green'}}></i>}
+            {isOn ? <i className="far fa-power-off" style={{color:'red'}}></i> : <i className="far fa-power-off" style={{color:'green'}}></i>}
           </button>
-          {isOn && <p style={{color:'green'}}> Включено</p>}
+          {isOn && <p className="lightText"> Включено</p>}
           {!isOn && <p style={{color:'red'}}>Выключено</p>}
         </div>
-        <h1 className="mt-5 txt-title">Weather-App</h1>
+        <h1 className={`mt-5 txt-title ${isOn ? 'lightText' : ''}`}>Weather-App</h1>
         <form
           className="d-flex justify-content-center align-items-center inpWrapper"
           onSubmit={getWeatherCity}
         >
           <input
-            className="searchCity w-50"
+            className={`searchCity w-50 ${isOn ? 'lightInput' : ''}`}
             type="text"
             placeholder="Введите название города"
             value={city}
             onChange={handleInputChange}
           />
-          <button className="fal fa-search" type="submit"></button>
+          <button className={`fal fa-search ${isOn ? 'fa-search' : ''}`} type="submit"></button>
         </form>
         {error && <p className="error-message mt-2">{error}</p>}
         <div className="iconBlock mt-5">
           {weatherData && getWeatherIcon(weatherData.weather[0].icon)}
         </div>
         <div className="grade d-flex justify-content-center">
-          {weatherData && <p>{Math.ceil(weatherData.main.temp - 273.15)}</p>}
+          {weatherData && <p className={`${isOn ? 'lightText' : ''}`}>{Math.ceil(weatherData.main.temp - 273.15)}</p>}
           <span className="mt-2">
-            <i className="fal fa-circle"></i>
+            <i className={`fal fa-circle ${isOn ? 'lightText' : ''}`}></i>
           </span>
-          <p className="grade-unit">C</p>
+          <p className={`grade-unit ${isOn ? 'lightText' : ''}`}>C</p>
         </div>
-        <div className="mt-5">
+        <div className={`mt-5 ${isOn ? 'lightText' : ''}`}>
           {weatherData && <h2>{weatherData.weather[0].description}</h2>}
         </div>
         <div className="d-flex w-50 m-auto justify-content-between weathet-title">
-          <p>Сегодня</p>
+          <p className={`${isOn ? 'lightText' : ''}`}>Сегодня</p>
           <p>
             {weatherData && (
-              <span>
+              <span className={`${isOn ? 'lightText' : ''}`}>
                 {new Date(weatherData.dt * 1000).toLocaleDateString("ru-RU", {
                   weekday: "short",
                   day: "numeric",
@@ -142,9 +144,9 @@ const SideBar = () => {
           </p>
         </div>
         <div className="sidebar-bottom text-center mt-5">
-          <p>
+          <p className={`${isOn ? 'lightText' : ''}`}>
             <span>
-              <i className="fal fa-map-marker-alt"></i>
+              <i className={`fal fa-map-marker-alt ${isOn ? 'lightText' : ''}`}></i>
             </span>
             {weatherData && <span>{weatherData.name}</span>}
           </p>
