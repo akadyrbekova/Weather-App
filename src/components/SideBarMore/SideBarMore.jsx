@@ -33,7 +33,7 @@ const SideBarMore = ({ dataWeather }) => {
                     7 <span className="card-ed">C</span>
                   </p>
                   <p>
-                  <i class="fad fa-temperature-low" style={{color:'red'}}></i>
+                  <i class="fad fa-temperature-low" style={{color:'blue'}}></i>
  
                   </p>
                 </div>
@@ -44,13 +44,13 @@ const SideBarMore = ({ dataWeather }) => {
             <div className="col-sm-6 mb-3 mb-sm-0">
               <div className="card">
                 <div className="card-body">
-                  <p className=" btn-primary">
+                  <h5>
                     Максимальная
-                  </p>
+                  </h5>
                   <h5 className="card-title">
                     <i
                       class="fad fa-temperature-hot"
-                      style={{ color: "blue" }}
+                      style={{ color: "red" }}
                     ></i>
                   </h5>
                   <p className="card-grade">
@@ -59,15 +59,15 @@ const SideBarMore = ({ dataWeather }) => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-6">
-              <div className="card">
+            <div className="col-sm-6 ">
+              <div className="card mb-3">
                 <div className="card-body">
                   <h5 className="card-title">По ощущениям</h5>
                   <p className="card-grade">
                     <span className="card-ed">35C</span>
                   </p>
                   <p className=" btn-primary">
-                  <i class="fas fa-temperature-high" style={{ color: "blue" }}></i>
+                  <i class="fas fa-temperature-high" style={{ color: "#3fc7d5" }}></i>
                   </p>
                 </div>
               </div>
