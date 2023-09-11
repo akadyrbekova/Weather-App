@@ -91,13 +91,13 @@ const SideBar = () => {
 
   return (
     <>
-      <div className="col-md-4 container sideLeft">
+      <div className="col-md-4  container sideLeft">
         <div>
-          <button onClick={toggleSwitch}>
-            {isOn ? "Выключить" : "Включить"}
+          <button onClick={toggleSwitch} style={{background:'transparent',margin:'5px 0'}}>
+            {isOn ? <i class="far fa-power-off" style={{color:'red'}}></i> : <i class="far fa-power-off" style={{color:'green'}}></i>}
           </button>
-          {isOn && <p> Включено</p>}
-          {!isOn && <p>Выключено</p>}
+          {isOn && <p style={{color:'green'}}> Включено</p>}
+          {!isOn && <p style={{color:'red'}}>Выключено</p>}
         </div>
         <h1 className="mt-5 txt-title">Weather-App</h1>
         <form
@@ -150,8 +150,8 @@ const SideBar = () => {
           </p>
         </div>
       </div>
+      {/* <SideBarMore dataWeather={weatherData} /> */}
     </>
   );
 };
-
 export default SideBar;

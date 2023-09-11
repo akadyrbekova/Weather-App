@@ -33,3 +33,25 @@
 .fa-temperature-down{
     color: red;
 }
+.fa-temperature-hot,
+.fa-temperature-low,
+.fa-temperature-high,
+.fa-sun{
+  font-size: 60px;
+  font-weight: 100;
+}
+.card{
+    background: #5856760a!important;
+    color: #fff!important;
+}
+@media (max-width: 768px) {
+  .descr-txt {
+    font-size: 1rem !important;
+  }
+  .searchCity {
+    font-size: 10px;
+  }
+  .card-title{
+    font-size: 17px;
+  }
+}

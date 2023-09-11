@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SideBarMore.css";
 
-const SideBarMore = () => {
+const SideBarMore = ({ dataWeather }) => {
   return (
     <>
       <div className="col-md-8 container sideBarMore">
@@ -19,9 +19,9 @@ const SideBarMore = () => {
                   <p className="card-grade">
                     15 <span className="card-ed">C</span>
                   </p>
-                  <a href="#" className="btn btn-primary">
-                    Go somewhere
-                  </a>
+                  <p className="btn-primary">
+                  <i class="fal fa-sun" style={{color:'yellow'}}></i>
+                  </p>
                 </div>
               </div>
             </div>
@@ -32,7 +32,10 @@ const SideBarMore = () => {
                   <p className="card-grade">
                     7 <span className="card-ed">C</span>
                   </p>
-                  {/* <p><i className = "far fa-temperature-down" style={{color:"red"}}></i></p> */}
+                  <p>
+                  <i class="fad fa-temperature-low" style={{color:'red'}}></i>
+ 
+                  </p>
                 </div>
               </div>
             </div>
@@ -41,13 +44,18 @@ const SideBarMore = () => {
             <div className="col-sm-6 mb-3 mb-sm-0">
               <div className="card">
                 <div className="card-body">
-                  <h5 className="card-title">Максимальная</h5>
-                  <p className="card-grade">
-                    30 <span className="card-ed">C</span>
+                  <p className=" btn-primary">
+                    Максимальная
                   </p>
-                  <a href="#" className="btn btn-primary">
-                    Go somewhere
-                  </a>
+                  <h5 className="card-title">
+                    <i
+                      class="fad fa-temperature-hot"
+                      style={{ color: "blue" }}
+                    ></i>
+                  </h5>
+                  <p className="card-grade">
+                    39 <span className="card-ed">C</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -56,12 +64,11 @@ const SideBarMore = () => {
                 <div className="card-body">
                   <h5 className="card-title">По ощущениям</h5>
                   <p className="card-grade">
-                    {" "}
-                    <span className="card-ed">C</span>
+                    <span className="card-ed">35C</span>
                   </p>
-                  <a href="#" className="btn btn-primary">
-                    Go somewhere
-                  </a>
+                  <p className=" btn-primary">
+                  <i class="fas fa-temperature-high" style={{ color: "blue" }}></i>
+                  </p>
                 </div>
               </div>
             </div>

@@ -54,6 +54,10 @@ h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
+.btn-primary{
+  text-decoration: none;
+  color: #fff;
+}
 .weather-title p {
   font-family: "Montserrat", sans-serif;
 }
